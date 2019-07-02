@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stlesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -17,22 +18,28 @@
 
     <section>
         <p> You will be given a random number at the start of the game.</p>
-        <p> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
-            total score.</p>
-        <p> You win the game by matching your total score to random number, you lose the game if your total score goes
-            above the random number.</p>
+        <p> There are four crystals below. By clicking on a crystal you will 
+            add a specific amount of points to your total score.</p>
+        <p> You win the game by matching your total score to random number, 
+            you lose the game if your total score goes above the random number.</p>
         <p> The value of each crystal is hidden from you until you click on it.</p>
         <p> Each time when the game starts, the game will change the values of each crystal.</p>
     </section>
 
     <div class="row">
-        <div id="rand-num">
+        <div id="randValue">
         </div>
 
      <div id ="score">
         <p2> Wins: </p2>
         <p2> Losses: </p2>
     </div>
+
+    <img class="crystal" id="blue-crystal" src="./assets/images/blue crystal.jpg" alt=" blue crystal">
+    <img class="crystal" id="clear-crystal" src="./assets/images/clear crystal.jpg" alt=" clear crystal">
+    <img class="crystal" id="purple-crystal" src="./assets/images/purple crystal.jpg" alt=" purple crystal">
+    <img class="crystal" id="green-crystal" src="./assets/images/green crystal.jpeg" alt=" green crystal">
+
 
     <div class ="score">
         <p3> Your total score is: </p3>
