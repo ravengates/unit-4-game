@@ -14,57 +14,55 @@ $('#numberWins').text(wins);
 $('#numberLosses').text(losses);
 
 
-//random number generated at beginning of game that ranges 19-120
+//////////random number generated at beginning of game that ranges 19-120
 var randomValue = Math.floor(Math.random() *120 + 19);
 $("#randValue").append(" "+ randomValue);
+
+
+//random numbers for each crystal
+var randomBlue = Math.floor(Math.random() *12 + 1);
+var randomClear = Math.floor(Math.random() *12 + 1);
+var randomPurple = Math.floor(Math.random() *12 + 1);
+var randomGreen = Math.floor(Math.random() *12 + 1);
 
 
 
 //On Click for Blue jewels ----- needs to keep the value its given and attach itsself to the score----------------------------
 $("#blue-crystal").on("click", function () {
-        var random = Math.floor(Math.random() *12 + 1);
-        crystalValues = random
-    
-    console.log(crystalValues);
+      total = total + randomBlue;
+     $("#totalscore").text(total);
+
+        console.log(randomBlue);
 
     
     })
 
     //On Click for Clear Jewel
-    $("#clear-crystal").on("click", function () {
+    $("#clear-crystal").on("click", function () {        
+        total = total + randomClear;
+        $("#totalscore").text(total);
 
-        var crystalValues = "";
-        for (var i=0; i<2; i++){
-            var random = Math.floor(Math.random() *11 + 1);
-            crystalValues = random
-        }
-        console.log(crystalValues);
+        console.log(randomClear);    
     
         
-        })
+    })
 
     //on click for purple jewel
     $("#purple-crystal").on("click", function () {
-
-        var crystalValues = "";
-        for (var i=0; i<2; i++){
-            var random = Math.floor(Math.random() *11 + 1);
-            crystalValues = random
-        }
-        console.log(crystalValues);
+        total = total + randomPurple;
+        $("#totalscore").text(total);
+           
+        console.log(randomPurple);
     
         
         })
 
-        //on clicl for green jewel
+        //on click for green jewel
         $("#green-crystal").on("click", function () {
-
-            var crystalValues = "";
-            for (var i=0; i<2; i++){
-                var random = Math.floor(Math.random() *11 + 1);
-                crystalValues = random
-            }
-            console.log(crystalValues);
+          total = total + randomGreen;
+          $("#totalscore").text(total);
+            
+            console.log(randomGreen);
         
             
             })

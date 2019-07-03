@@ -4,4 +4,56 @@ h1{
     font-size: 45px;
     width: 350px;
     padding: 25px;
+    margin: 12px;
+}
+
+p{
+    background-color: lightgoldenrodyellow;
+    color: green;
+    font-size: 20px;
+    width: 500px;
+    padding: 12px;
+    margin-left: 12px;
+   
+}
+
+#randValue{
+    background-color: #17BB86;
+    width: 275px;
+    font-size: 40px;
+    margin-left: 12px;
+    height: 150px;
+    margin: 12px;
+    float:left;
+    
+}
+
+#score {
+    background-color: turquoise;
+    text-align: center;
+    width: 130px;
+    height: 150px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+
+
+#crystalimages{
+    margin-top: 12px;
+    clear: both;
+      
+}
+
+#totalscore {
+    background-color:teal;
+    color: white;
+    font-size: 22px;
+    width: 275px;
+    height: 150px;
+   
+
 }
