@@ -1,4 +1,4 @@
-//once clicked crystal is now added to total score. 
+
 // once total score is equal to random number, win
 // once total score is over the random number, loss
 
@@ -7,11 +7,12 @@
 
 // variables
 var total = 0;
+$('#total').text(total);
+
 var wins = 0;
 var losses = 0;
-var crystalValues = "";
-$('#numberWins').text(wins);
-$('#numberLosses').text(losses);
+
+
 
 
 //////////random number generated at beginning of game that ranges 19-120
@@ -27,7 +28,7 @@ var randomGreen = Math.floor(Math.random() *12 + 1);
 
 
 
-//On Click for Blue jewels ----- needs to keep the value its given and attach itsself to the score----------------------------
+//On Click for Blue jewels ----- //once clicked crystal is now added to total score. 
 $("#blue-crystal").on("click", function () {
       total = total + randomBlue;
      $("#totalscore").text(total);
@@ -37,7 +38,7 @@ $("#blue-crystal").on("click", function () {
     
     })
 
-    //On Click for Clear Jewel
+    //On Click for Clear Jewel ----//once clicked crystal is now added to total score. 
     $("#clear-crystal").on("click", function () {        
         total = total + randomClear;
         $("#totalscore").text(total);
@@ -47,7 +48,7 @@ $("#blue-crystal").on("click", function () {
         
     })
 
-    //on click for purple jewel
+    //on click for purple jewel--- //once clicked crystal is now added to total score. 
     $("#purple-crystal").on("click", function () {
         total = total + randomPurple;
         $("#totalscore").text(total);
@@ -57,7 +58,7 @@ $("#blue-crystal").on("click", function () {
         
         })
 
-        //on click for green jewel
+        //on click for green jewel--- //once clicked crystal is now added to total score. 
         $("#green-crystal").on("click", function () {
           total = total + randomGreen;
           $("#totalscore").text(total);
@@ -66,3 +67,50 @@ $("#blue-crystal").on("click", function () {
         
             
             })
+
+      //Resets
+      //resets the values of jewels and resets Total and resets random number-- without resseting wins and losses
+
+      //does not reset random number.
+
+     
+      function reset(){
+        total= 0;
+        $("#totalscore").html(total);
+
+        randomValue = Math.floor(Math.random() *120 + 19);
+        $("#randValue").html(" " + randomValue);
+
+         randomBlue = Math.floor(Math.random() *12 + 1);
+         randomClear = Math.floor(Math.random() *12 + 1);
+         randomPurple = Math.floor(Math.random() *12 + 1);
+         randomGreen = Math.floor(Math.random() *12 + 1);
+        
+      }
+     
+   
+
+   ///wins and losses 
+
+      $(".crystal").on("click", function(){
+        if (total == randomValue) {
+          wins++;
+          console.log(total);
+          $("#totalscore").text(total);
+          $("#wins").html("Wins: " + wins);
+          reset();
+        }
+  
+        else if (total > randomValue){
+          losses++;
+          console.log(total);
+          $("#totalscore").text(total);
+          $("#losses").html("Losses: " + losses);
+          reset();
+  
+        }
+      });
+       
+
+
+
